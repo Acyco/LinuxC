@@ -1,0 +1,19 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ERR	slist.h	7;"	d
+Item	slist.h	/^typedef int Item;$/;"	t
+MAXSIZ	slist.h	5;"	d
+Node	slist.h	/^typedef struct Node$/;"	s
+OK	slist.h	6;"	d
+SLIST_H	slist.h	3;"	d
+Slist	slist.h	/^} Slist;$/;"	t	typeref:struct:Node
+Status	slist.h	/^typedef int Status;$/;"	t
+data	slist.h	/^    Item data[MAXSIZ];$/;"	m	struct:Node
+delItem	slist.c	/^Status delItem (Slist * slist , int i, Item *item)$/;"	f
+getItem	slist.c	/^Status getItem (Slist slist, int i, Item * item)$/;"	f
+insterItem	slist.c	/^Status insterItem (Slist * slist, int i, Item item)$/;"	f
+length	slist.h	/^    int length;$/;"	m	struct:Node
