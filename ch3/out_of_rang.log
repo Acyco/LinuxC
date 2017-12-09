@@ -1,0 +1,138 @@
+==00:00:00:00.000 13745== Memcheck, a memory error detector
+==00:00:00:00.000 13745== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==00:00:00:00.000 13745== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==00:00:00:00.000 13745== Command: ./out_of_rang
+==00:00:00:00.000 13745== Parent PID: 24527
+==00:00:00:00.000 13745== 
+--00:00:00:00.000 13745-- 
+--00:00:00:00.000 13745-- Valgrind options:
+--00:00:00:00.000 13745--    --tool=memcheck
+--00:00:00:00.000 13745--    --show-reachable=yes
+--00:00:00:00.000 13745--    --leak-check=full
+--00:00:00:00.000 13745--    --read-var-info=yes
+--00:00:00:00.000 13745--    --verbose
+--00:00:00:00.000 13745--    --error-limit=yes
+--00:00:00:00.000 13745--    --time-stamp=yes
+--00:00:00:00.000 13745--    --log-file=out_of_rang.log
+--00:00:00:00.000 13745-- Contents of /proc/version:
+--00:00:00:00.000 13745--   Linux version 4.12.0-kali1-amd64 (devel@kali.org) (gcc version 6.4.0 20170820 (Debian 6.4.0-4) ) #1 SMP Debian 4.12.6-1kali6 (2017-08-30)
+--00:00:00:00.000 13745-- 
+--00:00:00:00.000 13745-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-rdtscp-sse3-avx
+--00:00:00:00.000 13745-- Page sizes: currently 4096, max supported 4096
+--00:00:00:00.000 13745-- Valgrind library directory: /usr/lib/valgrind
+--00:00:00:00.000 13745-- Reading syms from /root/LinuxC/ch3/out_of_rang
+--00:00:00:00.002 13745-- Reading syms from /lib/x86_64-linux-gnu/ld-2.24.so
+--00:00:00:00.002 13745--   Considering /usr/lib/debug/.build-id/93/c123cbc9d19f47fb995008fb2c55f0689fea8c.debug ..
+--00:00:00:00.002 13745--   .. build-id is valid
+--00:00:00:00.596 13745-- Reading syms from /usr/lib/valgrind/memcheck-amd64-linux
+--00:00:00:00.596 13745--   Considering /usr/lib/valgrind/memcheck-amd64-linux ..
+--00:00:00:00.617 13745--   .. CRC mismatch (computed cc94779b wanted 23911726)
+--00:00:00:00.617 13745--   Considering /usr/lib/debug/usr/lib/valgrind/memcheck-amd64-linux ..
+--00:00:00:00.715 13745--   .. CRC is valid
+--00:00:00:00.722 13745--    object doesn't have a dynamic symbol table
+--00:00:00:02.310 13745-- warning: addVar: unknown size (sps)
+--00:00:00:02.311 13745-- warning: addVar: unknown size (sps)
+--00:00:00:02.311 13745-- warning: addVar: unknown size (ips)
+--00:00:00:02.313 13745-- warning: addVar: unknown size (qualname)
+--00:00:00:02.315 13745-- warning: addVar: unknown size (qualname)
+--00:00:00:02.315 13745-- warning: addVar: unknown size (qualname)
+--00:00:00:02.315 13745-- warning: addVar: unknown size (qualname)
+--00:00:00:02.344 13745-- warning: addVar: unknown size (buf)
+--00:00:00:02.469 13745-- Scheduler: using generic scheduler lock implementation.
+--00:00:00:02.472 13745-- Reading suppressions file: /usr/lib/valgrind/default.supp
+==00:00:00:02.474 13745== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-13745-by-root-on-???
+==00:00:00:02.474 13745== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-13745-by-root-on-???
+==00:00:00:02.474 13745== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-13745-by-root-on-???
+==00:00:00:02.474 13745== 
+==00:00:00:02.474 13745== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==00:00:00:02.474 13745== don't want to do, unless you know exactly what you're doing,
+==00:00:00:02.474 13745== or are doing some strange experiment):
+==00:00:00:02.474 13745==   /usr/lib/valgrind/../../bin/vgdb --pid=13745 ...command...
+==00:00:00:02.474 13745== 
+==00:00:00:02.474 13745== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==00:00:00:02.474 13745==   /path/to/gdb ./out_of_rang
+==00:00:00:02.474 13745== and then give GDB the following command
+==00:00:00:02.474 13745==   target remote | /usr/lib/valgrind/../../bin/vgdb --pid=13745
+==00:00:00:02.474 13745== --pid is optional if only one valgrind process is running
+==00:00:00:02.474 13745== 
+--00:00:00:02.495 13745-- REDIR: 0x401b2b0 (ld-linux-x86-64.so.2:strlen) redirected to 0x580a7611 (vgPlain_amd64_linux_REDIR_FOR_strlen)
+--00:00:00:02.534 13745-- REDIR: 0x4019b60 (ld-linux-x86-64.so.2:index) redirected to 0x580a762b (vgPlain_amd64_linux_REDIR_FOR_index)
+--00:00:00:02.577 13745-- Reading syms from /usr/lib/valgrind/vgpreload_core-amd64-linux.so
+--00:00:00:02.578 13745--   Considering /usr/lib/valgrind/vgpreload_core-amd64-linux.so ..
+--00:00:00:02.578 13745--   .. CRC mismatch (computed 295d56e8 wanted 0e0693fa)
+--00:00:00:02.578 13745--   Considering /usr/lib/debug/usr/lib/valgrind/vgpreload_core-amd64-linux.so ..
+--00:00:00:02.578 13745--   .. CRC is valid
+--00:00:00:02.590 13745-- Reading syms from /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so
+--00:00:00:02.590 13745--   Considering /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so ..
+--00:00:00:02.591 13745--   .. CRC mismatch (computed d787cc08 wanted 14e94c02)
+--00:00:00:02.591 13745--   Considering /usr/lib/debug/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so ..
+--00:00:00:02.593 13745--   .. CRC is valid
+==00:00:00:02.656 13745== WARNING: new redirection conflicts with existing -- ignoring it
+--00:00:00:02.656 13745--     old: 0x0401b2b0 (strlen              ) R-> (0000.0) 0x580a7611 vgPlain_amd64_linux_REDIR_FOR_strlen
+--00:00:00:02.656 13745--     new: 0x0401b2b0 (strlen              ) R-> (2007.0) 0x04c2eea0 strlen
+--00:00:00:02.668 13745-- REDIR: 0x4019d80 (ld-linux-x86-64.so.2:strcmp) redirected to 0x4c2ffa0 (strcmp)
+--00:00:00:02.673 13745-- REDIR: 0x401bdc0 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4c33370 (mempcpy)
+--00:00:00:02.694 13745-- Reading syms from /lib/x86_64-linux-gnu/libc-2.24.so
+--00:00:00:02.695 13745--   Considering /usr/lib/debug/.build-id/ad/f51e0aeadeab97be8477c04b75c4be44c3fc03.debug ..
+--00:00:00:02.695 13745--   .. build-id is valid
+--00:00:00:10.378 13745-- warning: addVar: unknown size (to_buf)
+--00:00:00:10.394 13745-- warning: addVar: unknown size (buffer)
+--00:00:00:10.740 13745-- REDIR: 0x4ebc710 (libc.so.6:strcasecmp) redirected to 0x4a26740 (_vgnU_ifunc_wrapper)
+--00:00:00:10.744 13745-- REDIR: 0x4eb81b0 (libc.so.6:strcspn) redirected to 0x4a26740 (_vgnU_ifunc_wrapper)
+--00:00:00:10.744 13745-- REDIR: 0x4ebea00 (libc.so.6:strncasecmp) redirected to 0x4a26740 (_vgnU_ifunc_wrapper)
+--00:00:00:10.745 13745-- REDIR: 0x4eba620 (libc.so.6:strpbrk) redirected to 0x4a26740 (_vgnU_ifunc_wrapper)
+--00:00:00:10.746 13745-- REDIR: 0x4eba9b0 (libc.so.6:strspn) redirected to 0x4a26740 (_vgnU_ifunc_wrapper)
+--00:00:00:10.747 13745-- REDIR: 0x4ebbd80 (libc.so.6:memmove) redirected to 0x4a26740 (_vgnU_ifunc_wrapper)
+--00:00:00:10.771 13745-- REDIR: 0x4eba330 (libc.so.6:rindex) redirected to 0x4c2e830 (rindex)
+--00:00:00:10.798 13745-- REDIR: 0x4eb2f10 (libc.so.6:malloc) redirected to 0x4c2bb80 (malloc)
+==00:00:00:10.800 13745== Invalid write of size 4
+==00:00:00:10.800 13745==    at 0x1086DB: main (out_of_rang.c:12)
+==00:00:00:10.800 13745==  Address 0x51d5054 is 0 bytes after a block of size 20 alloc'd
+==00:00:00:10.800 13745==    at 0x4C2BBEF: malloc (vg_replace_malloc.c:299)
+==00:00:00:10.800 13745==    by 0x1086B0: main (out_of_rang.c:8)
+==00:00:00:10.800 13745== 
+==00:00:00:10.800 13745== Invalid read of size 4
+==00:00:00:10.800 13745==    at 0x1086E5: main (out_of_rang.c:13)
+==00:00:00:10.800 13745==  Address 0x51d5054 is 0 bytes after a block of size 20 alloc'd
+==00:00:00:10.800 13745==    at 0x4C2BBEF: malloc (vg_replace_malloc.c:299)
+==00:00:00:10.800 13745==    by 0x1086B0: main (out_of_rang.c:8)
+==00:00:00:10.800 13745== 
+--00:00:00:10.802 13745-- REDIR: 0x4ec2710 (libc.so.6:strchrnul) redirected to 0x4c32ea0 (strchrnul)
+--00:00:00:10.856 13745-- REDIR: 0x4eb3510 (libc.so.6:free) redirected to 0x4c2cdb0 (free)
+==00:00:00:10.869 13745== 
+==00:00:00:10.869 13745== HEAP SUMMARY:
+==00:00:00:10.869 13745==     in use at exit: 20 bytes in 1 blocks
+==00:00:00:10.869 13745==   total heap usage: 2 allocs, 1 frees, 1,044 bytes allocated
+==00:00:00:10.869 13745== 
+==00:00:00:10.869 13745== Searching for pointers to 1 not-freed blocks
+==00:00:00:10.870 13745== Checked 69,744 bytes
+==00:00:00:10.870 13745== 
+==00:00:00:10.870 13745== 20 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==00:00:00:10.870 13745==    at 0x4C2BBEF: malloc (vg_replace_malloc.c:299)
+==00:00:00:10.870 13745==    by 0x1086B0: main (out_of_rang.c:8)
+==00:00:00:10.870 13745== 
+==00:00:00:10.870 13745== LEAK SUMMARY:
+==00:00:00:10.870 13745==    definitely lost: 20 bytes in 1 blocks
+==00:00:00:10.870 13745==    indirectly lost: 0 bytes in 0 blocks
+==00:00:00:10.870 13745==      possibly lost: 0 bytes in 0 blocks
+==00:00:00:10.870 13745==    still reachable: 0 bytes in 0 blocks
+==00:00:00:10.870 13745==         suppressed: 0 bytes in 0 blocks
+==00:00:00:10.870 13745== 
+==00:00:00:10.870 13745== ERROR SUMMARY: 3 errors from 3 contexts (suppressed: 0 from 0)
+==00:00:00:10.870 13745== 
+==00:00:00:10.870 13745== 1 errors in context 1 of 3:
+==00:00:00:10.870 13745== Invalid read of size 4
+==00:00:00:10.870 13745==    at 0x1086E5: main (out_of_rang.c:13)
+==00:00:00:10.870 13745==  Address 0x51d5054 is 0 bytes after a block of size 20 alloc'd
+==00:00:00:10.870 13745==    at 0x4C2BBEF: malloc (vg_replace_malloc.c:299)
+==00:00:00:10.870 13745==    by 0x1086B0: main (out_of_rang.c:8)
+==00:00:00:10.870 13745== 
+==00:00:00:10.870 13745== 
+==00:00:00:10.870 13745== 1 errors in context 2 of 3:
+==00:00:00:10.870 13745== Invalid write of size 4
+==00:00:00:10.870 13745==    at 0x1086DB: main (out_of_rang.c:12)
+==00:00:00:10.870 13745==  Address 0x51d5054 is 0 bytes after a block of size 20 alloc'd
+==00:00:00:10.870 13745==    at 0x4C2BBEF: malloc (vg_replace_malloc.c:299)
+==00:00:00:10.870 13745==    by 0x1086B0: main (out_of_rang.c:8)
+==00:00:00:10.870 13745== 
+==00:00:00:10.870 13745== ERROR SUMMARY: 3 errors from 3 contexts (suppressed: 0 from 0)

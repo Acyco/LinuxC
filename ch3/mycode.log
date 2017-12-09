@@ -1,0 +1,20 @@
+==00:00:00:00.000 13266== Memcheck, a memory error detector
+==00:00:00:00.000 13266== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==00:00:00:00.000 13266== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==00:00:00:00.000 13266== Command: ./no_init_test
+==00:00:00:00.000 13266== Parent PID: 24527
+==00:00:00:00.000 13266== 
+==00:00:00:10.981 13266== Conditional jump or move depends on uninitialised value(s)
+==00:00:00:10.981 13266==    at 0x108646: main (no_init_test.c:6)
+==00:00:00:10.981 13266==  Uninitialised value was created by a stack allocation
+==00:00:00:10.981 13266==    at 0x10863A: main (no_init_test.c:4)
+==00:00:00:10.981 13266== 
+==00:00:00:11.097 13266== 
+==00:00:00:11.097 13266== HEAP SUMMARY:
+==00:00:00:11.097 13266==     in use at exit: 0 bytes in 0 blocks
+==00:00:00:11.097 13266==   total heap usage: 1 allocs, 1 frees, 1,024 bytes allocated
+==00:00:00:11.097 13266== 
+==00:00:00:11.097 13266== All heap blocks were freed -- no leaks are possible
+==00:00:00:11.097 13266== 
+==00:00:00:11.097 13266== For counts of detected and suppressed errors, rerun with: -v
+==00:00:00:11.097 13266== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
