@@ -1,0 +1,134 @@
+==00:00:00:00.000 26495== Memcheck, a memory error detector
+==00:00:00:00.000 26495== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==00:00:00:00.000 26495== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==00:00:00:00.000 26495== Command: ./sscanf_example
+==00:00:00:00.000 26495== Parent PID: 21212
+==00:00:00:00.000 26495== 
+--00:00:00:00.000 26495-- 
+--00:00:00:00.000 26495-- Valgrind options:
+--00:00:00:00.000 26495--    --tool=memcheck
+--00:00:00:00.000 26495--    --show-reachable=yes
+--00:00:00:00.000 26495--    --read-var-info=yes
+--00:00:00:00.000 26495--    --verbose
+--00:00:00:00.000 26495--    --error-limit=yes
+--00:00:00:00.000 26495--    --time-stamp=yes
+--00:00:00:00.000 26495--    --leak-check=yes
+--00:00:00:00.000 26495--    --log-file=sscanf_example.log
+--00:00:00:00.000 26495-- Contents of /proc/version:
+--00:00:00:00.000 26495--   Linux version 4.12.0-kali1-amd64 (devel@kali.org) (gcc version 6.4.0 20170820 (Debian 6.4.0-4) ) #1 SMP Debian 4.12.6-1kali6 (2017-08-30)
+--00:00:00:00.000 26495-- 
+--00:00:00:00.000 26495-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-rdtscp-sse3-avx
+--00:00:00:00.000 26495-- Page sizes: currently 4096, max supported 4096
+--00:00:00:00.000 26495-- Valgrind library directory: /usr/lib/valgrind
+--00:00:00:00.000 26495-- Reading syms from /root/LinuxC/ch4/sscanf_example
+--00:00:00:00.002 26495-- Reading syms from /lib/x86_64-linux-gnu/ld-2.24.so
+--00:00:00:00.003 26495--   Considering /usr/lib/debug/.build-id/93/c123cbc9d19f47fb995008fb2c55f0689fea8c.debug ..
+--00:00:00:00.003 26495--   .. build-id is valid
+--00:00:00:00.629 26495-- Reading syms from /usr/lib/valgrind/memcheck-amd64-linux
+--00:00:00:00.629 26495--   Considering /usr/lib/valgrind/memcheck-amd64-linux ..
+--00:00:00:00.651 26495--   .. CRC mismatch (computed cc94779b wanted 23911726)
+--00:00:00:00.651 26495--   Considering /usr/lib/debug/usr/lib/valgrind/memcheck-amd64-linux ..
+--00:00:00:00.749 26495--   .. CRC is valid
+--00:00:00:00.756 26495--    object doesn't have a dynamic symbol table
+--00:00:00:02.494 26495-- warning: addVar: unknown size (sps)
+--00:00:00:02.495 26495-- warning: addVar: unknown size (sps)
+--00:00:00:02.495 26495-- warning: addVar: unknown size (ips)
+--00:00:00:02.497 26495-- warning: addVar: unknown size (qualname)
+--00:00:00:02.499 26495-- warning: addVar: unknown size (qualname)
+--00:00:00:02.499 26495-- warning: addVar: unknown size (qualname)
+--00:00:00:02.499 26495-- warning: addVar: unknown size (qualname)
+--00:00:00:02.531 26495-- warning: addVar: unknown size (buf)
+--00:00:00:02.656 26495-- Scheduler: using generic scheduler lock implementation.
+--00:00:00:02.659 26495-- Reading suppressions file: /usr/lib/valgrind/default.supp
+==00:00:00:02.662 26495== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-26495-by-root-on-???
+==00:00:00:02.662 26495== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-26495-by-root-on-???
+==00:00:00:02.662 26495== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-26495-by-root-on-???
+==00:00:00:02.662 26495== 
+==00:00:00:02.662 26495== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==00:00:00:02.662 26495== don't want to do, unless you know exactly what you're doing,
+==00:00:00:02.662 26495== or are doing some strange experiment):
+==00:00:00:02.662 26495==   /usr/lib/valgrind/../../bin/vgdb --pid=26495 ...command...
+==00:00:00:02.662 26495== 
+==00:00:00:02.662 26495== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==00:00:00:02.662 26495==   /path/to/gdb ./sscanf_example
+==00:00:00:02.662 26495== and then give GDB the following command
+==00:00:00:02.662 26495==   target remote | /usr/lib/valgrind/../../bin/vgdb --pid=26495
+==00:00:00:02.662 26495== --pid is optional if only one valgrind process is running
+==00:00:00:02.662 26495== 
+--00:00:00:02.683 26495-- REDIR: 0x401b2b0 (ld-linux-x86-64.so.2:strlen) redirected to 0x580a7611 (vgPlain_amd64_linux_REDIR_FOR_strlen)
+--00:00:00:02.722 26495-- REDIR: 0x4019b60 (ld-linux-x86-64.so.2:index) redirected to 0x580a762b (vgPlain_amd64_linux_REDIR_FOR_index)
+--00:00:00:02.765 26495-- Reading syms from /usr/lib/valgrind/vgpreload_core-amd64-linux.so
+--00:00:00:02.765 26495--   Considering /usr/lib/valgrind/vgpreload_core-amd64-linux.so ..
+--00:00:00:02.765 26495--   .. CRC mismatch (computed 295d56e8 wanted 0e0693fa)
+--00:00:00:02.765 26495--   Considering /usr/lib/debug/usr/lib/valgrind/vgpreload_core-amd64-linux.so ..
+--00:00:00:02.765 26495--   .. CRC is valid
+--00:00:00:02.777 26495-- Reading syms from /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so
+--00:00:00:02.778 26495--   Considering /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so ..
+--00:00:00:02.778 26495--   .. CRC mismatch (computed d787cc08 wanted 14e94c02)
+--00:00:00:02.778 26495--   Considering /usr/lib/debug/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so ..
+--00:00:00:02.780 26495--   .. CRC is valid
+==00:00:00:02.820 26495== WARNING: new redirection conflicts with existing -- ignoring it
+--00:00:00:02.820 26495--     old: 0x0401b2b0 (strlen              ) R-> (0000.0) 0x580a7611 vgPlain_amd64_linux_REDIR_FOR_strlen
+--00:00:00:02.820 26495--     new: 0x0401b2b0 (strlen              ) R-> (2007.0) 0x04c2eea0 strlen
+--00:00:00:02.829 26495-- REDIR: 0x4019d80 (ld-linux-x86-64.so.2:strcmp) redirected to 0x4c2ffa0 (strcmp)
+--00:00:00:02.833 26495-- REDIR: 0x401bdc0 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4c33370 (mempcpy)
+--00:00:00:02.855 26495-- Reading syms from /lib/x86_64-linux-gnu/libc-2.24.so
+--00:00:00:02.855 26495--   Considering /usr/lib/debug/.build-id/ad/f51e0aeadeab97be8477c04b75c4be44c3fc03.debug ..
+--00:00:00:02.855 26495--   .. build-id is valid
+--00:00:00:11.074 26495-- warning: addVar: unknown size (to_buf)
+--00:00:00:11.089 26495-- warning: addVar: unknown size (buffer)
+--00:00:00:11.471 26495-- REDIR: 0x4ebc710 (libc.so.6:strcasecmp) redirected to 0x4a26740 (_vgnU_ifunc_wrapper)
+--00:00:00:11.474 26495-- REDIR: 0x4eb81b0 (libc.so.6:strcspn) redirected to 0x4a26740 (_vgnU_ifunc_wrapper)
+--00:00:00:11.475 26495-- REDIR: 0x4ebea00 (libc.so.6:strncasecmp) redirected to 0x4a26740 (_vgnU_ifunc_wrapper)
+--00:00:00:11.475 26495-- REDIR: 0x4eba620 (libc.so.6:strpbrk) redirected to 0x4a26740 (_vgnU_ifunc_wrapper)
+--00:00:00:11.476 26495-- REDIR: 0x4eba9b0 (libc.so.6:strspn) redirected to 0x4a26740 (_vgnU_ifunc_wrapper)
+--00:00:00:11.478 26495-- REDIR: 0x4ebbd80 (libc.so.6:memmove) redirected to 0x4a26740 (_vgnU_ifunc_wrapper)
+--00:00:00:11.503 26495-- REDIR: 0x4eba330 (libc.so.6:rindex) redirected to 0x4c2e830 (rindex)
+--00:00:00:11.539 26495-- REDIR: 0x4eb2f10 (libc.so.6:malloc) redirected to 0x4c2bb80 (malloc)
+--00:00:00:11.551 26495-- REDIR: 0x4ebaf50 (libc.so.6:__GI_strstr) redirected to 0x4c335d0 (__strstr_sse2)
+--00:00:00:11.574 26495-- REDIR: 0x4eb3510 (libc.so.6:free) redirected to 0x4c2cdb0 (free)
+--00:00:00:11.581 26495-- REDIR: 0x4ebb3c0 (libc.so.6:strstr) redirected to 0x4a26740 (_vgnU_ifunc_wrapper)
+--00:00:00:11.582 26495-- REDIR: 0x4ed0810 (libc.so.6:__strstr_sse2_unaligned) redirected to 0x4c33560 (strstr)
+--00:00:00:11.588 26495-- REDIR: 0x4ec2500 (libc.so.6:rawmemchr) redirected to 0x4c32ed0 (rawmemchr)
+--00:00:00:11.608 26495-- REDIR: 0x4eb8650 (libc.so.6:strlen) redirected to 0x4c2ede0 (strlen)
+--00:00:00:11.618 26495-- REDIR: 0x4ebbe90 (libc.so.6:memcpy@GLIBC_2.2.5) redirected to 0x4c30100 (memcpy@GLIBC_2.2.5)
+==00:00:00:11.636 26495== Invalid write of size 4
+==00:00:00:11.636 26495==    at 0x4E913AD: _IO_vfscanf (vfscanf.c:2451)
+==00:00:00:11.636 26495==    by 0x4E9D5AB: __isoc99_vsscanf (isoc99_vsscanf.c:43)
+==00:00:00:11.636 26495==    by 0x4E9D536: __isoc99_sscanf (isoc99_sscanf.c:31)
+==00:00:00:11.636 26495==    by 0x1088F0: get_cpu_clock_speed (sscanf_example.c:29)
+==00:00:00:11.636 26495==    by 0x108963: main (sscanf_example.c:42)
+==00:00:00:11.636 26495==  Address 0x7 is not stack'd, malloc'd or (recently) free'd
+==00:00:00:11.636 26495== 
+==00:00:00:11.636 26495== 
+==00:00:00:11.636 26495== Process terminating with default action of signal 11 (SIGSEGV)
+==00:00:00:11.636 26495==  Access not within mapped region at address 0x7
+==00:00:00:11.636 26495==    at 0x4E913AD: _IO_vfscanf (vfscanf.c:2451)
+==00:00:00:11.636 26495==    by 0x4E9D5AB: __isoc99_vsscanf (isoc99_vsscanf.c:43)
+==00:00:00:11.636 26495==    by 0x4E9D536: __isoc99_sscanf (isoc99_sscanf.c:31)
+==00:00:00:11.637 26495==    by 0x1088F0: get_cpu_clock_speed (sscanf_example.c:29)
+==00:00:00:11.637 26495==    by 0x108963: main (sscanf_example.c:42)
+==00:00:00:11.637 26495==  If you believe this happened as a result of a stack
+==00:00:00:11.637 26495==  overflow in your program's main thread (unlikely but
+==00:00:00:11.637 26495==  possible), you can try to increase the size of the
+==00:00:00:11.637 26495==  main thread stack using the --main-stacksize= flag.
+==00:00:00:11.637 26495==  The main thread stack size used in this run was 8388608.
+==00:00:00:11.663 26495== 
+==00:00:00:11.663 26495== HEAP SUMMARY:
+==00:00:00:11.663 26495==     in use at exit: 0 bytes in 0 blocks
+==00:00:00:11.663 26495==   total heap usage: 2 allocs, 2 frees, 1,576 bytes allocated
+==00:00:00:11.663 26495== 
+==00:00:00:11.663 26495== All heap blocks were freed -- no leaks are possible
+==00:00:00:11.663 26495== 
+==00:00:00:11.663 26495== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==00:00:00:11.663 26495== 
+==00:00:00:11.663 26495== 1 errors in context 1 of 1:
+==00:00:00:11.663 26495== Invalid write of size 4
+==00:00:00:11.663 26495==    at 0x4E913AD: _IO_vfscanf (vfscanf.c:2451)
+==00:00:00:11.663 26495==    by 0x4E9D5AB: __isoc99_vsscanf (isoc99_vsscanf.c:43)
+==00:00:00:11.663 26495==    by 0x4E9D536: __isoc99_sscanf (isoc99_sscanf.c:31)
+==00:00:00:11.663 26495==    by 0x1088F0: get_cpu_clock_speed (sscanf_example.c:29)
+==00:00:00:11.663 26495==    by 0x108963: main (sscanf_example.c:42)
+==00:00:00:11.663 26495==  Address 0x7 is not stack'd, malloc'd or (recently) free'd
+==00:00:00:11.663 26495== 
+==00:00:00:11.663 26495== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
